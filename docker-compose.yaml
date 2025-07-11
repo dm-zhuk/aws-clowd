@@ -5,12 +5,10 @@ services:
     image: dpage/pgadmin4
     container_name: pgadmin_ui
     environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+      PGADMIN_DEFAULT_EMAIL: admin@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: admin
     ports:
       - "5050:80"
-    depends_on:
-      - db
     networks:
       - app-network
 
